@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Greet Me Form</h2>
+<form action="/greet" method="post">
+  <label for="name">Enter your name:</label>
+  <input type="text" id="name" name="name" required>
+  <button type="submit">Submit</button>
+</form>
+
+{% if message %}
+  <p><strong>{{ message }}</strong></p>
+{% endif %}
+{% endblock %}
+

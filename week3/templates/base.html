@@ -1,0 +1,26 @@
+•	<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title or "Flask Lab" }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Flask Learning Project</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/greet">Greet</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2025 Flask Lab</p>
+    </footer>
+</body>
+</html>
